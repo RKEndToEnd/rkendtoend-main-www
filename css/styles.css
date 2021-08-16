@@ -4822,12 +4822,17 @@ textarea.form-control-lg {
   }
 }
 
+.list-single-clear
+{
+  list-style-type: none;
+}
 .list-group {
   display: flex;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   border-radius: 0.25rem;
+  list-style-type: none;
 }
 .list-group-clear {
   list-style-type: none;
