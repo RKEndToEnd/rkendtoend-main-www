@@ -53,10 +53,10 @@
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Realizacje</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
                     <li class="nav-item"><a class="nav-link" href="referencje/">Referencje</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/RKEndToEnd"><i
-                                class="bi bi-github"></i></a></i></li>
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/RKEndToEnd"><i
-                                class="bi bi-twitter"></i></a></i></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/RKEndToEnd">
+                            <i class="bi bi-github"></i></a></i></li>
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/RKEndToEnd">
+                            <i class="bi bi-twitter"></i></a></i></li>
                 </ul>
             </div>
         </div>
@@ -252,6 +252,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <!-- Messenger Wtyczka czatu Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Wtyczka czatu code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "110379214846395");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v12.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
